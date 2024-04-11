@@ -1,0 +1,98 @@
+@extends('admin.master')
+<!-- main layout -->
+
+@section('content')
+<!-- yield section start -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    setTimeout(function() {
+        $('.alert-div').fadeOut('fast');
+    }, 5000); // <-- time in milliseconds
+</script>
+
+<!-- Header content -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Add Category</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Home</a></li>
+                    <li class="breadcrumb-item active">Add Category</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.Header content -->
+
+@if(Session::has('Success'))
+<div class="alert alert-success alert-div">
+    {{Session::get('Success')}}
+</div>
+@endif
+@if(Session::has('Error'))
+<div class="alert alert-danger alert-div">
+    {{Session::get('Error')}}
+</div>
+@endif
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <div class="card card-primary">
+
+                    <!-- form start -->
+                    <form method="post" action="{{route('admin.category.save')}}">
+                        @csrf()
+                        <div class="card-body">
+
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-2 col-form-label">Name: *</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" placeholder="Category Name" required>
+                                    @if($errors->has('name'))
+                                    <span class="text-danger pl-2">{{$errors->first('name')}}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="desc" class="col-sm-2 col-form-label">Description:</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="desc" id="desc" placeholder="Category Description"></textarea>
+                                    @if($errors->has('desc'))
+                                    <span class="text-danger pl-2">{{$errors->first('desc')}}</span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <input type="submit" class="btn btn-primary btn-large" name="addCategory" value="Add Category">
+
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!--/.col (left) -->
+
+            <!-- right column -->
+            <div class="col-md-6">
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+
+    </div><!-- /.container-fluid -->
+
+</section>
+<!-- /Main content -->
+
+@stop
+<!-- yield section end -->
