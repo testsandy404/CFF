@@ -34,6 +34,8 @@ Route::get('/faqs', [FEController::class, 'faqPage'])->name('faqs');
 Route::get('/team', [FEController::class, 'teamPage'])->name('team');
 Route::get('/contact-us', [FEController::class, 'contactPage'])->name('contact_us');
 Route::post('/contact-us-submit', [FEController::class, 'submitContactForm'])->name('contact_us.submit');
+Route::get('/about-us', [FEController::class, 'aboutUs'])->name('about_us');
+
 
 // Auth::routes();
 
