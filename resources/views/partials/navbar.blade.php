@@ -9,13 +9,18 @@
                 <span class="fa fa-bars text-primary"></span>
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                <div class="navbar-nav mx-auto" >
+                <div class="navbar-nav mx-auto">
                     <a href="{{route('index')}}" class="nav-item nav-link @if(Route::currentRouteName() =='index') active @endif">Home</a>
+                    <span class="mx-4"></span> 
                     {{-- <a href="{{route('about_us')}}" class="nav-item nav-link {{ request()->is('/about-us') ? 'active' : ''}}">About Us</a> --}}
                     <a href="{{route('about_us')}}" class="nav-item nav-link @if(Route::currentRouteName() =='products') active @endif">About Us</a>
+                    <span class="mx-4"></span> 
                     <a href="{{route('products')}}" class="nav-item nav-link @if(Route::currentRouteName() =='products') active @endif">Our Products</a>
+                    <span class="mx-4"></span> 
                     <a href="{{route('team')}}" class="nav-item nav-link @if(Route::currentRouteName() =='team') active @endif">Our Team</a>
+                    <span class="mx-4"></span> 
                     <a href="{{route('faqs')}}" class="nav-item nav-link @if(Route::currentRouteName() =='faqs') active @endif">FAQs</a>
+                    <span class="mx-4"></span> 
                     <a href="{{route('contact_us')}}" class="nav-item nav-link @if(Route::currentRouteName() =='contact_us') active @endif">Contact Us</a>
                 </div>
                 {{-- <div class="d-flex m-3 me-0">
