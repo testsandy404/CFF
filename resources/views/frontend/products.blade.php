@@ -17,7 +17,7 @@
                 <div class="row g-4">
                     <div class="col-lg-3">
                         <div class="row g-4">
-                            <form method="post" action="{{route('products')}}">
+                            <form method="post" action="{{route('products.search')}}">
                                 @csrf
                                 <div class="col-lg-12">
                                     <div class="mb-3">

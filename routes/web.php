@@ -29,7 +29,7 @@ use App\Http\Controllers\FrontEnd\FEController;
 
 Route::get('/', [FEController::class, 'indexPage'])->name('index');
 Route::get('/products', [FEController::class, 'productsPage'])->name('products');
-Route::post('/products', [FEController::class, 'productsPage'])->name('products');
+Route::post('/products', [FEController::class, 'productsPage'])->name('products.search');
 Route::get('/faqs', [FEController::class, 'faqPage'])->name('faqs');
 Route::get('/team', [FEController::class, 'teamPage'])->name('team');
 Route::get('/contact-us', [FEController::class, 'contactPage'])->name('contact_us');
