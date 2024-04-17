@@ -26,10 +26,20 @@
                 </div>
                 <div class="col-lg-7">
                     <form method="post" action="{{route('contact_us.submit')}}" class="">
+                        @csrf
                         <input type="text" class="w-100 form-control border-0 py-3 mb-4" name="name" id="name" placeholder="Your Name" required>
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         <input type="email" class="w-100 form-control border-0 py-3 mb-4" name="email" id="email" placeholder="Enter Your Email" required>
                         <input type="number" class="w-100 form-control border-0 py-3 mb-4" name="contact_no" id="contact_no" placeholder="Enter Your Contact No." required>
+                        @error('contact_no')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         <textarea class="w-100 form-control border-0 mb-4" rows="5" cols="10" name="message" id="message" placeholder="Your Message" required></textarea>
+                        @error('message')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         <button class="w-100 btn form-control border-secondary py-3 bg-white text-primary " type="submit">Submit</button>
                     </form>
                 </div>

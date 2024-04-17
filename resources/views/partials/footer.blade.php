@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+<div class="container-fluid bg-dark text-white-50 footer pt-0 mt-5">
     <div class="container py-5">
         <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
             <div class="row g-4">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <div class="row g-5">
+        <div class="row g-5 justify-content-center">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-item">
                     <h4 class="text-light mb-3">Why People Like us!</h4>
@@ -30,18 +30,22 @@
                     <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
                 </div>
             </div>
+
+        {{-- Added space between columns for symmetry --}}
+            <div class="col-lg-1 col-md-3" ></div>
+
             <div class="col-lg-3 col-md-6">
-                <div class="d-flex flex-column text-start footer-item">
+                <div class="d-flex flex-column text-center footer-item" >
                     <h4 class="text-light mb-3">Shop Info</h4>
-                    <a class="btn-link" href="">About Us</a>
-                    <a class="btn-link" href="">Contact Us</a>
+                    <a class="btn-link" href="/team">About Us</a>
+                    <a class="btn-link" href="/contact-us">Contact Us</a>
                     <a class="btn-link" href="">Privacy Policy</a>
                     <a class="btn-link" href="">Terms & Condition</a>
                     <a class="btn-link" href="">Return Policy</a>
-                    <a class="btn-link" href="">FAQs & Help</a>
+                    <a class="btn-link" href="/faqs">FAQs & Help</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            {{-- <div class="col-lg-3 col-md-6">
                 <div class="d-flex flex-column text-start footer-item">
                     <h4 class="text-light mb-3">Account</h4>
                     <a class="btn-link" href="">My Account</a>
@@ -51,9 +55,13 @@
                     <a class="btn-link" href="">Order History</a>
                     <a class="btn-link" href="">International Orders</a>
                 </div>
-            </div>
+            </div> --}}
+
+            {{-- Added space between columns for symmetry --}}
+            <div class="col-lg-1 col-md-3" ></div>
+
             <div class="col-lg-3 col-md-6">
-                <div class="footer-item">
+                <div class="footer-item text-center">
                     <h4 class="text-light mb-3">Contact</h4>
                     <p>Address: 1429 Netus Rd, NY 48247</p>
                     <p>Email: Example@gmail.com</p>

@@ -59,18 +59,24 @@ class FEController extends Controller
         return view('frontend.team');
     }
 
+    public function aboutUs()
+    {
+        return view('frontend.about_us');
+    }
+
     public function submitContactForm(Request $req)
     {
         $validateForm = $req->validate([
-            'name' => 'required|regex:/^[a-zA-Z0-9 ]{2,100}$/',
+            'name' => 'required|regex:/^[a-zA-Z ]{2,100}$/',
             'email' => 'required|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
-            'contact_no' => 'required|numeric',
+            'contact_no' => 'required|digits:10',
             'message' => 'required|regex:/^[a-zA-Z0-9 ]{2,500}$/',
 
         ], [
             'name.required' => "Enter title",
-            'name.regex' => "Alphanumeric only, 2-100 characters",
-
+            'name.regex' => "Alphabets only, 2-100 characters",
+            'contact_no.required'=> "Contact Number is Required",
+            'contact_no.digits' => "Only 10 numbers allowed",
             'message.max' => "Alphanumeric only, 2-500 characters",
 
         ]);
@@ -81,10 +87,9 @@ class FEController extends Controller
             $contactus->email = $req->email;
             $contactus->contact = $req->contact_no;
             $contactus->message = $req->message;
-
             try {
                 $contactus->save();
-                return Redirect::route('admin.banner')->with('Success', 'Banner added successfully!');
+                return Redirect::route('index')->with('Success', 'Contact form submitted successfully!');
             } catch (\Illuminate\Database\QueryException $e) {
                 return back()->with('Error', 'Oops! Something went wrong. Try again later.');
             }
