@@ -4,8 +4,11 @@
 @section('content')
 
 <!-- Single Page Header start -->
-<div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Our Products</h1>
+<div class="container-fluid py-5">
+    <div class="text-center mx-auto" style="max-width: 700px;">
+        <h1 class="display-4">Our Products</h1>
+        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+    </div>
 </div>
 <!-- Single Page Header End -->
 
@@ -26,7 +29,7 @@
                                         @foreach($brands as $brand)
                                         <div class="mb-2">
                                             <input type="checkbox" class="me-2" id="brand-{{$brand->id}}" name="brands[]" value="{{$brand->id}}" {{in_array($brand->id, $requestBrands) ? 'checked' : ''}}>
-                                            <label for="brand-1">{{$brand->name}}</label>
+                                            <label for="brand-{{$brand->id}}">{{$brand->name}}</label>
                                         </div>
                                         @endforeach
                                         @endif
@@ -39,7 +42,7 @@
                                         @foreach($categories as $category)
                                         <div class="mb-2">
                                             <input type="checkbox" class="me-2" id="category-{{$category->id}}" name="category[]" value="{{$category->id}}" {{in_array($category->id, $requestCategory) ? 'checked' : ''}}>
-                                            <label for="Categories-1">{{$category->name}}</label>
+                                            <label for="categories-{{$category->id}}">{{$category->name}}</label>
                                         </div>
                                         @endforeach
                                         <input class="btn btn-primary rounded-pill text-white" type="submit" value="Apply Filter">

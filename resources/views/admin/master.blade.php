@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('index')}}">Home Page</a>
+                </li>
             </ul>
 
             <!-- Right navbar links -->
@@ -132,12 +135,12 @@
                         <li class="nav-item">
                             <a href="{{route('admin.brand')}}" class="nav-link">
                                 <p>
-                                    <i class="fa fa-users nav-icon"></i>
+                                    <i class="fa fa-circle nav-icon"></i>
                                     Brand
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="{{route('admin.vendor')}}" class="nav-link">
                                 <p>
@@ -147,7 +150,7 @@
                             </a>
                         </li>
 
-                        
+
                         <li class="nav-item">
                             <a href="{{route('admin.contact')}}" class="nav-link">
                                 <p>
@@ -165,7 +168,7 @@
                                 </p>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

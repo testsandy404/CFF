@@ -74,7 +74,7 @@
                                         <td class="text-center">{{ $con->name }}</td>
                                         <td class="text-center">{{ $con->email }}</td>
                                         <td class="text-center">{{ $con->contact }}</td>
-                                        <td class="text-center">{{ str_limit($con->message, $limit = 25, $end = '...') }}</td>
+                                        <td class="text-center">{{ \Illuminate\Support\Str::limit($con->message, $limit = 25, $end = '...') }}</td>
                                         <td class="text-center">
                                             <a href="{{route('admin.contact.view', $con->id)}}" class="btn btn-warning">View</a>
                                         </td>

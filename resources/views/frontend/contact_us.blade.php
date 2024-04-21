@@ -3,14 +3,19 @@
 
 @section('content')
 <!-- Single Page Header start -->
-<div class="container-fluid page-header py-5">
+<!-- <div class="container-fluid page-header py-5">
     <h1 class="text-center text-white display-6">Contact Us</h1>
+</div> -->
+<div class="container-fluid pt-5 pb-3">
+    <div class="text-center mx-auto" style="max-width: 700px;">
+        <h1 class="display-4">Contact Us</h1>
+    </div>
 </div>
 <!-- Single Page Header End -->
 
 <!-- Contact Start -->
-<div class="container-fluid contact py-5">
-    <div class="container py-5">
+<div class="container-fluid contact py-2">
+    <div class="container py-2">
         <div class="p-5 bg-light rounded">
             <div class="row g-4">
                 <div class="col-12">
@@ -21,7 +26,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="h-100 rounded">
-                        <img class="rounded w-100" style="height: 400px;" src="assets/img/best-product-1.jpg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></img>
+                        <img class="rounded w-100" style="height: 400px;" src="assets/img/location.jpg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></img>
                     </div>
                 </div>
                 <div class="col-lg-7">

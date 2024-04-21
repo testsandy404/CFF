@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\ContactForm;
 use App\Models\Faq;
 use App\Models\Product;
+use App\Models\Vendor;
 use Illuminate\Support\Facades\Redirect;
 
 class FEController extends Controller
@@ -19,11 +20,13 @@ class FEController extends Controller
         $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
         $brandData = Brand::all();
         $popularProductData = Product::where('type', 1)->get(); // Type 1 = Feautured
-        return view('frontend.index', ['bannerData' => $bannerData, 'brandData' => $brandData, 'productData' => $popularProductData]);
+        $custData = Vendor::all();
+        return view('frontend.index', ['bannerData' => $bannerData, 'brandData' => $brandData, 'productData' => $popularProductData, 'custData' => $custData]);
     }
 
     public function productsPage(Request $request)
     {
+        $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
         $categories = Category::orderBy('name')->get();
         $brands = Brand::orderBy('name')->get();
         $productQuery = new Product();
@@ -40,28 +43,32 @@ class FEController extends Controller
         }
 
         $productData = $productQuery->orderBy('type', 'DESC')->paginate(9);
-        return view('frontend.products', ['categories' => $categories, 'brands' => $brands, 'productData' => $productData, 'requestBrands' => $requestBrands, 'requestCategory' => $requestCategory]);
+        return view('frontend.products', ['categories' => $categories, 'brands' => $brands, 'productData' => $productData, 'requestBrands' => $requestBrands, 'requestCategory' => $requestCategory, 'bannerData' => $bannerData]);
     }
 
     public function faqPage()
     {
+        $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
         $faqs = Faq::all();
-        return view('frontend.faqs', ['faqs' => $faqs]);
+        return view('frontend.faqs', ['faqs' => $faqs, 'bannerData' => $bannerData]);
     }
 
     public function contactPage()
     {
-        return view('frontend.contact_us');
+        $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
+        return view('frontend.contact_us', ['bannerData' => $bannerData]);
     }
 
     public function teamPage()
     {
-        return view('frontend.team');
+        $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
+        return view('frontend.team', ['bannerData' => $bannerData]);
     }
 
     public function aboutUs()
     {
-        return view('frontend.about_us');
+        $bannerData = Banner::orderBy('created_at', 'DESC')->where('is_active', 1)->limit(6)->get();
+        return view('frontend.about_us', ['bannerData' => $bannerData]);
     }
 
     public function submitContactForm(Request $req)

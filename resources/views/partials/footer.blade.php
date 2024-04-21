@@ -66,8 +66,6 @@
                     <p>Address: 1429 Netus Rd, NY 48247</p>
                     <p>Email: Example@gmail.com</p>
                     <p>Phone: +0123 4567 8910</p>
-                    <p>Payment Accepted</p>
-                    <img src="img/payment.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>

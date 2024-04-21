@@ -139,7 +139,7 @@ class ProductController extends Controller
                 $pro->quantity = $req->quantity;
                 if ($req->image) {
                     $name = $pro->thumbnail;
-                    $req->image->move(storage_path('uploads/thumbnails'), $name);
+                    $req->image->move(storage_path('app/public/uploads/products'), $name);
                 }
                 $pro->save();
                 return back()->with('Success', 'Product updated successfully');

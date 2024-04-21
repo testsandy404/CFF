@@ -2,45 +2,6 @@
 <!-- main layout -->
 
 @section('content')
-<!-- Hero Start -->
-<div class="container-fluid mb-5 hero-header">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-md-12 col-lg-5">
-                <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                <h1 class="mb-5 display-3 text-primary">Chef's Frozen<br />Foods</h1>
-            </div>
-            <div class="col-md-12 col-lg-7">
-                <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        @if(count($bannerData) > 0)
-                        @foreach($bannerData as $sr => $banner)
-                        @if($sr == 1)
-                        <div class="carousel-item active rounded">
-                            <img src="{{asset('storage/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
-                        </div>
-                        @else
-                        <div class="carousel-item rounded">
-                            <img src="{{asset('storage/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
-                        </div>
-                        @endif
-                        @endforeach
-                        @endif
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Hero End -->
 
 <!-- Brands Start -->
 <div class="container-fluid brands py-2">
@@ -150,22 +111,14 @@
         <div class="brands-header text-center">
             <h4 class="display-5 text-primary mb-5">Our Customers</h4>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-            <div class="col mb-4">
-                <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="img-fluid" alt="Image 2">
+        <div class="row justify-content-center">
+            @if(count($custData) > 0)
+            @foreach($custData as $cust)
+            <div class="col-md-2 col-sm-4 col-6 mb-4 img-border-radius bg-light rounded p-2 mx-2">
+                <img src="{{asset('storage/uploads/vendors/'.$cust->image)}}" class="img-fluid" alt="{{$cust->name}}">
             </div>
-            <div class="col mb-4">
-                <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="img-fluid" alt="Image 3">
-            </div>
-            <div class="col mb-4">
-                <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="img-fluid" alt="Image 4">
-            </div>
-            <div class="col mb-4">
-                <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="img-fluid" alt="Image 5">
-            </div>
-            <div class="col mb-4">
-                <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="img-fluid" alt="Image 6">
-            </div>
+            @endforeach
+            @endif
         </div>
     </div>
 </div>

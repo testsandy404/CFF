@@ -45,15 +45,17 @@
                 <div class="card">
                     <!-- card-header -->
                     <div class="card-header">
-                        <h3 class="card-title">Welcome {{ Auth::user()->first_name }}</h3>
+                        <h3 class="card-title">Notes:</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- card-body -->
-                    @if( Auth::user()->role == 1 || Auth::user()->role == 2)
+                    
                     <div class="card-body">
-                        <a href="dashboard" class="btn btn-primary btn-large mr-2">Dashboard</a>
+                        <p><span class="text-bold">Banner - </span>Banner section on home page will display only 6 active images in descending order or creation. Banner status (active/inactive) can be changed through edit functionality.</p>
+                        <p><span class="text-bold">Brands - </span>All brands will be displayed on the home page carousel.</p>
+                        <p><span class="text-bold">Product - </span>Only featured products will be displayed on home page which can be set while adding/editing the product.</p>
                     </div>
-                    @endif
+                    
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->

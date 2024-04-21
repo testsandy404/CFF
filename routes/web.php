@@ -50,10 +50,10 @@ Route::prefix('admin')->group(function () {
         Route::get('/master', [AdminUserController::class, 'master']);
         Route::get('/home', [AdminUserController::class, 'home'])->name('home');
 
-        Route::get('/change-password', [AdminUserController::class, 'changePass']);
-        Route::post('/changepassvalid', [AdminUserController::class, 'passValid']);
-        Route::get('/edit-profile', [AdminUserController::class, 'editProfile']);
-        Route::post('/editprofilevalid', [AdminUserController::class, 'editProfileValid']);
+        // Route::get('/change-password', [AdminUserController::class, 'changePass']);
+        // Route::post('/changepassvalid', [AdminUserController::class, 'passValid']);
+        // Route::get('/edit-profile', [AdminUserController::class, 'editProfile']);
+        // Route::post('/editprofilevalid', [AdminUserController::class, 'editProfileValid']);
 
         Route::get('/category', [CategoryController::class, 'category'])->name('category');
         Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('category.add');

@@ -34,6 +34,7 @@
 
 <body>
     @include('partials.navbar')
+    @include('partials.banner')
     <main>
         @yield('content')
     </main>

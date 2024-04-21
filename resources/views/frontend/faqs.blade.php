@@ -4,12 +4,15 @@
 @section('content')
 
 <!-- Single Page Header start -->
-<div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">FAQs</h1>
+<div class="container-fluid pt-5">
+    <div class="text-center mx-auto" style="max-width: 700px;">
+        <h1 class="display-4">FAQs</h1>
+        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+    </div>
 </div>
 <!-- Single Page Header End -->
-<div class="container-fluid contact py-5">
-    <div class="container py-5">
+<div class="container-fluid contact py-2">
+    <div class="container py-2">
         <div class="row g-4">
             <div class="container-fluid faqs py-2">
                 <div id="accordion">

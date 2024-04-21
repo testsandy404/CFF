@@ -12,8 +12,7 @@
                 <div class="navbar-nav mx-auto">
                     <a href="{{route('index')}}" class="nav-item nav-link @if(Route::currentRouteName() =='index') active @endif">Home</a>
                     <span class="mx-4"></span> 
-                    {{-- <a href="{{route('about_us')}}" class="nav-item nav-link {{ request()->is('/about-us') ? 'active' : ''}}">About Us</a> --}}
-                    <a href="{{route('about_us')}}" class="nav-item nav-link @if(Route::currentRouteName() =='products') active @endif">About Us</a>
+                    <a href="{{route('about_us')}}" class="nav-item nav-link @if(Route::currentRouteName() =='about_us') active @endif">About Us</a>
                     <span class="mx-4"></span> 
                     <a href="{{route('products')}}" class="nav-item nav-link @if(Route::currentRouteName() =='products') active @endif">Our Products</a>
                     <span class="mx-4"></span> 

@@ -29,7 +29,7 @@
 <!-- /Header content -->
 
 @if(Session::has('Success'))
-<div class="alert alert-success alert-div"> 
+<div class="alert alert-success alert-div">
     {{Session::get('Success')}}
 </div>
 @endif
@@ -51,22 +51,21 @@
                     <form>
                         <div class="card-body">
                             <div class="form-group row">
-                                <label for="name" class="col-sm-2 col-form-label">Name:</label>
-                                <div class="col-sm-3">
-                                    <input type="text" readonly class="form-control" id="name" name="name" value="{{ $con->name }}" >
-                                </div>
-                                <div class="col-sm-2"></div>
-                                <label for="mail" class="col-sm-2 col-form-label">Email:</label>
-                                <div class="col-sm-3">
-                                    <input type="text" readonly class="form-control" id="mail" name="mail" value="{{ $con->email }}">
+                                <label for="sub" class="col-sm-2 col-form-label">Name:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control" id="name" name="name" value="{{ $con->name }}">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="sub" class="col-sm-2 col-form-label">Subject:</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control" id="sub" name="sub" value="{{ $con->subject }}">
-
+                                <label for="name" class="col-sm-2 col-form-label">Mobile:</label>
+                                <div class="col-sm-3">
+                                    <input type="text" readonly class="form-control" id="name" name="name" value="{{ $con->contact }}">
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <label for="mail" class="col-sm-2 col-form-label">Email:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" readonly class="form-control" id="mail" name="mail" value="{{ $con->email }}">
                                 </div>
                             </div>
 
@@ -78,7 +77,7 @@
                             </div>
 
                             <input type="hidden" name="cid" id="cid" value="{{ $con->id }}">
-                            <input type="submit" class="btn btn-primary btn-large" name="reply" value="Reply">
+                            <!-- <input type="submit" class="btn btn-primary btn-large" name="reply" value="Reply"> -->
                         </div>
                     </form>
                 </div>
