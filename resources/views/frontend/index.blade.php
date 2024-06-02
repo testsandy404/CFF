@@ -22,60 +22,107 @@
 </div>
 <!-- Brands End -->
 
-<!-- Featurs (How we work) Section Start -->
-<div class="container-fluid featurs pb-5">
-    <div class="container py-5">
+<!-- Features (Our Achievements) Section Start -->
+<div class="container-fluid">
+    <div class="container pb-6">
         <div class="brands-header text-center">
-            <h4 class="display-5 text-primary mb-5">How we work</h4>
+            <h4 class="display-5 text-primary mb-4">Our Achievements</h4>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="featurs-item text-center rounded bg-light p-4">
-                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                        <i class="fas fa-car-side fa-3x text-white"></i>
-                    </div>
-                    <div class="featurs-content text-center">
-                        <h5>Free Shipping</h5>
-                        <p class="mb-0">Free on order over $300</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="featurs-item text-center rounded bg-light p-4">
-                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                        <i class="fas fa-user-shield fa-3x text-white"></i>
-                    </div>
-                    <div class="featurs-content text-center">
-                        <h5>Security Payment</h5>
-                        <p class="mb-0">100% security payment</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="featurs-item text-center rounded bg-light p-4">
-                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                        <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                    </div>
-                    <div class="featurs-content text-center">
-                        <h5>30 Day Return</h5>
-                        <p class="mb-0">30 day money guarantee</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="featurs-item text-center rounded bg-light p-4">
-                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                        <i class="fa fa-phone-alt fa-3x text-white"></i>
-                    </div>
-                    <div class="featurs-content text-center">
-                        <h5>24/7 Support</h5>
-                        <p class="mb-0">Support every time fast</p>
-                    </div>
-                </div>
-            </div>
+        
+    {{-- Certificate cards --}}
+    <div class="container pb-5">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
+          <div class="col-md-3">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
+          <div class="col-md-3">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
+          <div class="col-md-3">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
         </div>
-    </div>
-</div>
+        <div class="row mt-4">
+          <div class="col-md-3 offset-md-2">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
+          <div class="col-md-3 offset-md-2">
+            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          </div>
+        </div>
+      </div>
+
+
+      {{-- Statistics section start --}}  
+    
+      <div class="container-fluid my-5 p-5" style="background-image: linear-gradient(to right,#1d5167,#238868);">
+        <ul class="count-list d-flex flex-wrap justify-content-around" style="padding: 0;">
+           <ul style="padding-left: 0;">
+              <div class="divider">
+                 <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                     <span>10000</span>
+                     <span>+</span>  
+                </div> 
+                 <strong class="d-block" style="font-size: 18px; color:white;">Deliveries per Month</strong>
+              </div>
+              <hr style="border: 1px solid white; margin-top: 40px;">
+            </ul> 
+           <ul style="padding-left: 0;">
+              <div class="divider"> 
+                   <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                     <span>50</span>
+                    <span>+</span>  
+                </div>
+                 <strong class="d-block" style="font-size: 18px; color:white;">Sourcing Locations</strong>
+              </div>
+              <hr style="border: 1px solid white; margin-top: 40px;">
+            </ul>
+           <ul style="padding-left: 0;">
+              <div class="divider">
+                  <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                  <span >1000</span>
+                    <span>+</span>  
+                  </div>
+                 <strong class="d-block" style="font-size: 18px; color:white;">Outlets Serviced </strong>
+              </div>
+              <hr style="border: 1px solid white; margin-top: 40px;">
+            </ul>
+        </ul>
+        <ul class="count-list d-flex flex-wrap justify-content-around" style="padding: 0;" >
+           <ul style="padding-left: 0;">
+              <div class="text-center">
+                  <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                  <span>99.5</span>
+                      <span>%</span>
+                  </div>
+                 <strong class="d-block" style="font-size: 18px; color:white;">Successfull Order Fill <br>Rate</strong>
+              </div>
+            </ul>  
+           <ul style="padding-left: 0;"> 
+              <div class="text-center">
+                  <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                   <span class="counter-count">75</span>
+                    <span>+</span>  
+                  </div>
+                 <strong class="d-block" style="font-size: 18px; color:white;">GPS Enabled Multi-<br>temperature Vehicles</strong>
+              </div>
+            </ul>
+           <ul style="padding-left: 0;">
+              <div class="text-center">
+                  <div class="d-flex justify-content-center" style="font-size: 40px; color:white;">
+                     <span class="counter-count">50</span>
+                    <span>+</span>  
+                  </div>
+                 <strong class="d-block" style="font-size: 18px; color:white;">Million <br>Cases Handled</strong>
+              </div>
+            </ul>
+        </ul>
+     </div>
+
+       
 <!-- Featurs (How we work) Section End -->
 
 <!-- Our Products-->

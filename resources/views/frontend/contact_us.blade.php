@@ -19,16 +19,46 @@
         <div class="p-5 bg-light rounded">
             <div class="row g-4">
                 <div class="col-12">
-                    <div class="text-center mx-auto" style="max-width: 700px;">
-                        <h1 class="text-primary">Get in touch</h1>
+                    <div class="text-center mx-auto" style="max-width: 700px;margin-bottom:-15px;">
+                        <h1 class="text-primary">Our Locations</h1>
                         <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.</p>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="h-100 rounded">
-                        <img class="rounded w-100" style="height: 400px;" src="assets/img/location.jpg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></img>
+                
+                {{-- Location cards --}}
+            <div class="container">
+               <div class="d-flex flex-row">
+                <div class="card" style="width: 18rem; margin-right:20px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
+                  </div>
+                  <div class="card" style="width: 18rem; margin-right:20px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem; margin-right:20px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;margin-right:auto;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
                 </div>
+            </div>
+                
                 <div class="col-lg-7">
                     <form method="post" action="{{route('contact_us.submit')}}" class="">
                         @csrf
