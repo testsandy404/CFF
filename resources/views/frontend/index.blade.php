@@ -33,7 +33,7 @@
     <div class="container pb-5">
         <div class="row">
           <div class="col-md-3">
-            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+            <img src="storage\uploads\certificates\certificate1.jpeg" class="card-img" alt="Image of a person">
           </div>
           <div class="col-md-3">
             <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
