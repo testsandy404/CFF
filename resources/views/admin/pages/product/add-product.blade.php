@@ -139,6 +139,18 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="add_info" class="col-sm-2 col-form-label">Additional Info: *</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="add_info" name="add_info" placeholder="Additional Info">
+                                    @if($errors->has('add_info'))
+                                    <div class="alert-danger">
+                                        <span class="text-white pl-3">{{$errors->first('add_info')}}</span>
+                                    </div>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
 
                                 <label for="price" class="col-sm-2 col-form-label">Price:</label>
 

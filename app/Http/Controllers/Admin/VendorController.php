@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Department;
 use Illuminate\Http\Request;
 use App\Models\Vendor;
 use Illuminate\Support\Facades\Redirect;
@@ -17,18 +18,22 @@ class VendorController extends Controller
 
     public function addVendor()
     {
-        return view('admin.pages.vendor.add-vendor');
+        $deptData = Department::all();
+        return view('admin.pages.vendor.add-vendor', ['deptData' => $deptData]);
     }
 
     public function vendorValid(Request $req)    //add banner validation
     {
         $validateVendor = $req->validate([
             'name' => 'required|regex:/^[a-zA-Z0-9 ]{2,100}$/',
+            'dept_id'  => 'required',
             'image' => 'required|mimes:jpeg,jpg,png',
 
         ], [
             'name.required' => "Enter title",
             'name.regex' => "Alphanumeric only, 2-100 characters",
+
+            'dept_id.required'  => 'Department type is required',
 
             'image.required' => "Select image",
             'image.mimes' => "Only jpeg, jpg and png files allowed",
@@ -38,6 +43,7 @@ class VendorController extends Controller
 
             $vendor = new Vendor();
             $vendor->name = $req->name;
+            $vendor->dept_id = $req->dept_id;
             $name = $req->name . '.' . $req->image->extension();
             $vendor->image = $name;
             try {
@@ -53,7 +59,8 @@ class VendorController extends Controller
     public function editVendor($id)
     {
         $vendorData = Vendor::where('id', '=', $id)->first();
-        return view('admin.pages.vendor.edit-vendor', ['vendorData' => $vendorData]);
+        $deptData = Department::all();
+        return view('admin.pages.vendor.edit-vendor', ['vendorData' => $vendorData, 'deptData' => $deptData]);
     }
 
 
@@ -62,12 +69,15 @@ class VendorController extends Controller
     {
         $validateVendor = $req->validate([
             'name' => 'required|regex:/^[a-zA-Z ]{2,100}$/',
+            'dept_id'  => 'required',
             'image' => 'mimes:jpeg,jpg,png',
             'vid' => 'required',
 
         ], [
             'name.required' => "Enter title",
             'name.regex' => "Alphabets only, 2-100 characters",
+
+            'dept_id.required'  => 'Department type is required',
 
             'image.mimes' => "Only jpeg, jpg and png files allowed",
 
@@ -76,7 +86,7 @@ class VendorController extends Controller
 
             $vendor = Vendor::where('id', '=', $req->vid)->first();
             $vendor->name = $req->name;
-
+            $vendor->dept_id = $req->dept_id;
 
             try {
                 $vendor->save();

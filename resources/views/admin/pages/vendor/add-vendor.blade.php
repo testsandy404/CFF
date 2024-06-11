@@ -64,6 +64,23 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="title" class="col-sm-2 col-form-label">Department: *</label>
+                                <div class="col-sm-10">
+                                    <select name="dept_id" class="form-control" required>
+                                        <option value="">Select Department</option>
+                                        @foreach($deptData as $dept)
+                                        <option value="{{$dept->id}}">{{$dept->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    @if($errors->has('dept_id'))
+                                    <div class="alert-danger">
+                                        <span class="text-white pl-3">{{$errors->first('dept_id')}}</span>
+                                    </div>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="image" class="col-sm-2 col-form-label">Image: *</label>
                                 <div class="col-sm-10">
                                     <div class="custom-file">
@@ -75,11 +92,11 @@
                                         <span class="text-white pl-3">{{$errors->first('image')}}</span>
                                     </div>
                                     @endif
-                                    <img class="my-2" id="frame" src="" alt="preview" width="200px" height="200px"/>
+                                    <img class="my-2" id="frame" src="" alt="preview" width="200px" height="200px" />
                                 </div>
                             </div>
 
-                            <input type="submit" class="btn btn-primary btn-large"  value="Add Vendor">
+                            <input type="submit" class="btn btn-primary btn-large" value="Add Vendor">
 
                         </div>
                     </form>

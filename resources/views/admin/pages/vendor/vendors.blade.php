@@ -85,6 +85,7 @@
                                     <tr>
                                         <th class="col-1 text-center">Sr. No.</th>
                                         <th class="col-2 text-center">Name</th>
+                                        <th class="col-2 text-center">Department</th>
                                         <th class="col-2 text-center">Image</th>
                                         <th class="col-2 text-center">Action</th>
                                     </tr>
@@ -97,6 +98,7 @@
                                     <tr>
                                         <td class="text-center">{{ $sn }}</td>
                                         <td class="text-center">{{ $vendor->name }}</td>
+                                        <td class="text-center">{{ $vendor->departmemt->name }}</td>
                                         <td class="text-center">
                                             <img src="{{asset('storage/uploads/vendors/'.$vendor->image)}}" width="60px" height="60px">
                                         </td>

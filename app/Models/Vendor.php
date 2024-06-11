@@ -9,5 +9,9 @@ class Vendor extends Model
 {
     // use HasFactory;
     protected $table = "vendors";
+
+    public function departmemt(){
+        return $this->belongsTo(Department::class, 'dept_id');
+    }
     
 }

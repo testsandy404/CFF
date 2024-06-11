@@ -41,6 +41,7 @@ class ProductController extends Controller
             'type'  => 'required',
             'price' => 'nullable|numeric',
             'quantity' => 'nullable|numeric',
+            'add_info' => 'nullable',
             'image' => 'required|mimes:jpeg,jpg,png',
         ], [
             'name.required' => "Enter name",
@@ -62,6 +63,7 @@ class ProductController extends Controller
                 $pro->category_id = $req->catid;
                 $pro->brand_id = $req->brandid;
                 $pro->type = $req->type;
+                $pro->add_info = $req->add_info;
                 // $pro->code = $uuid;
                 $pro->price = $req->price;
                 $pro->quantity = $req->quantity;
@@ -114,6 +116,7 @@ class ProductController extends Controller
             'catid' => 'required',
             'brandid' => 'required',
             'type'  => 'required',
+            'add_info' => 'nullable',
             'price' => 'nullable|numeric',
             'quantity' => 'nullable|numeric',
             'image' => 'required|mimes:jpeg,jpg,png',
@@ -135,6 +138,7 @@ class ProductController extends Controller
                 $pro->type = $req->type;
                 $pro->category_id = $req->catid;
                 $pro->brand_id = $req->brandid;
+                $pro->add_info = $req->add_info;
                 $pro->price = $req->price;
                 $pro->quantity = $req->quantity;
                 if ($req->image) {

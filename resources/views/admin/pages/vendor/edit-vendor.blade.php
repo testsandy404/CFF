@@ -63,7 +63,24 @@
                                 </div>
                             </div>
 
-
+                            <div class="form-group row">
+                                <label for="title" class="col-sm-2 col-form-label">Department: *</label>
+                                <div class="col-sm-10">
+                                    <select name="dept_id" class="form-control" required>
+                                        <option value="">Select Department</option>
+                                        @foreach($deptData as $dept)
+                                        <option value="{{$dept->id}}" <?php if ($vendorData->dept_id == $dept->id) {
+                                                                            echo 'selected';
+                                                                        } ?>>{{$dept->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    @if($errors->has('dept_id'))
+                                    <div class="alert-danger">
+                                        <span class="text-white pl-3">{{$errors->first('dept_id')}}</span>
+                                    </div>
+                                    @endif
+                                </div>
+                            </div>
 
 
 

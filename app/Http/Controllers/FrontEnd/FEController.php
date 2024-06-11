@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\ContactForm;
+use App\Models\Department;
 use App\Models\Faq;
 use App\Models\Product;
 use App\Models\Vendor;
@@ -21,7 +22,8 @@ class FEController extends Controller
         $brandData = Brand::all();
         $popularProductData = Product::where('type', 1)->get(); // Type 1 = Feautured
         $custData = Vendor::all();
-        return view('frontend.index', ['bannerData' => $bannerData, 'brandData' => $brandData, 'productData' => $popularProductData, 'custData' => $custData]);
+        $deptData = Department::all();
+        return view('frontend.index', ['bannerData' => $bannerData, 'brandData' => $brandData, 'productData' => $popularProductData, 'custData' => $custData, 'deptData' => $deptData]);
     }
 
     public function productsPage(Request $request)
