@@ -14,7 +14,7 @@
 <div class="container p-0">  
         <div class="row justify-content-center">
           <div class="col-md-4">
-            <img src="storage\uploads\about_us\chefs.jpeg" class="card-img" alt="Image of a person" style="width:100%; height:85%;">
+            <img src="assets\img\about_us\chefs.jpeg" class="card-img" alt="Image of a person" style="width:100%; height:85%;">
             {{-- <div class="text-center pt-3" style="font-size:18px; color:black;">
                 <b>Promoter Chairman Chefs Frozen Foods Pvt. Ltd.</b> --}}
                 <div class="text-center pt-3">
