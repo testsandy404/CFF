@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- Single Page Header start -->
-<div class="container-fluid py-5">
+<div class="container-fluid py-5" id="our-team-header">
     <div class="text-center mx-auto" style="max-width: 700px;">
         <h1 class="display-4">Our Team</h1>
     </div>
@@ -86,8 +86,12 @@
             </div>
         </div>
 
-
-
     </div>
 </div>
+
+<script>
+    window.onload = function() {
+        document.getElementById('our-team-header').scrollIntoView();
+    };
+</script>
 @stop

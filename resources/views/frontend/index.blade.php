@@ -7,7 +7,7 @@
 <div class="container-fluid brands py-2">
   <div class="container py-5">
     <div class="brands-header text-center">
-      <h4 class="display-5 text-primary mb-5">Our Brands</h4>
+      <h4 class="display-5 text-primary mb-5">Brands</h4>
     </div>
     <div class="owl-carousel brands-carousel">
       @if(count($brandData) > 0)
