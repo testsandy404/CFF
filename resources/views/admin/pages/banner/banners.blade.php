@@ -108,7 +108,7 @@
                                         </td>
                                         @endif
                                         <td class="text-center">
-                                            <img src="{{asset('storage/uploads/banners/'.$banner->image)}}" width="60px" height="60px">
+                                            <img src="{{asset('storage/app/public/uploads/banners/'.$banner->image)}}" width="60px" height="60px">
                                         </td>
                                         <td class="text-center">
                                             <a href="{{route('admin.banner.edit',$banner->id)}}" class="btn btn-warning">Edit</a>

@@ -119,7 +119,7 @@
                                     </div>
                                     @endif
                                     <div>
-                                        <img src="{{asset('storage/uploads/banners/'.$bannerData->image)}}" class="my-2" id="preview-img-tag" alt="Preview" height="200px" width="200px" />
+                                        <img src="{{asset('storage/app/public/uploads/banners/'.$bannerData->image)}}" class="my-2" id="preview-img-tag" alt="Preview" height="200px" width="200px" />
                                     </div>
                                 </div>
                             </div>

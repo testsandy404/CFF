@@ -27,43 +27,32 @@
                     <h4 class="text-light mb-3">Why People Like us!</h4>
                     <p class="mb-4">typesetting, remaining essentially unchanged. It was
                         popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
-                    <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                    <!-- <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a> -->
                 </div>
             </div>
 
         {{-- Added space between columns for symmetry --}}
-            <div class="col-lg-1 col-md-3" ></div>
+            <!-- <div class="col-lg-1 col-md-3" ></div> -->
 
             <div class="col-lg-3 col-md-6">
                 <div class="d-flex flex-column text-center footer-item" >
-                    <h4 class="text-light mb-3">Shop Info</h4>
-                    <a class="btn-link" href="/team">About Us</a>
+                    <h4 class="text-light mb-3">Quick Links</h4>
+                    <a class="btn-link" href="/about-us">About Us</a>
+                    <a class="btn-link" href="">Products</a>
+                    <a class="btn-link" href="/faqs">FAQs</a>
                     <a class="btn-link" href="/contact-us">Contact Us</a>
-                    <a class="btn-link" href="">Privacy Policy</a>
-                    <a class="btn-link" href="">Terms & Condition</a>
-                    <a class="btn-link" href="">Return Policy</a>
-                    <a class="btn-link" href="/faqs">FAQs & Help</a>
                 </div>
             </div>
-            {{-- <div class="col-lg-3 col-md-6">
-                <div class="d-flex flex-column text-start footer-item">
-                    <h4 class="text-light mb-3">Account</h4>
-                    <a class="btn-link" href="">My Account</a>
-                    <a class="btn-link" href="">Shop details</a>
-                    <a class="btn-link" href="">Shopping Cart</a>
-                    <a class="btn-link" href="">Wishlist</a>
-                    <a class="btn-link" href="">Order History</a>
-                    <a class="btn-link" href="">International Orders</a>
-                </div>
-            </div> --}}
 
             {{-- Added space between columns for symmetry --}}
-            <div class="col-lg-1 col-md-3" ></div>
+            <div class="col-lg-2 col-md-3" ></div>
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-item text-center">
-                    <h4 class="text-light mb-3">Contact</h4>
-                    <p>Address: 1429 Netus Rd, NY 48247</p>
+                    <h4 class="text-light mb-3">Get in Touch</h4>
+                    <p>Address: Chefs Frozen Foods Pvt Ltd<br>
+                                C/o Tan Swa Technologies Inc,<br> W-441, TTC Industrial Area,<br> Rabale MIDC,
+                                Behind Alfa Laval Ltd,<br> Rabale, Navi Mumbai- 400701</p>
                     <p>Email: Example@gmail.com</p>
                     <p>Phone: +0123 4567 8910</p>
                 </div>
@@ -81,10 +70,7 @@
                 <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Chef's Frozen Foods</a>, All right reserved.</span>
             </div>
             <div class="col-md-6 my-auto text-center text-md-end text-white">
-                <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                Designed By - Sandeep Sabu
+                Managed By - Sandeep Sabu & Neer Shah
             </div>
         </div>
     </div>

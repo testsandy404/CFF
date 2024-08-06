@@ -98,7 +98,7 @@
                                         <td class="text-center">{{ $sn }}</td>
                                         <td class="text-center">{{ $brand->name }}</td>
                                         <td class="text-center">
-                                            <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" width="60px" height="60px">
+                                            <img src="{{asset('storage/app/public/uploads/brands/'.$brand->logo)}}" width="60px" height="60px">
                                         </td>
                                         <td class="text-center">
                                             <a href="edit-brand-{{ $brand->id }}" class="btn btn-warning">Edit</a>

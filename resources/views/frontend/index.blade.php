@@ -13,7 +13,7 @@
       @if(count($brandData) > 0)
       @foreach($brandData as $brand)
       <div class="brands-item img-border-radius bg-light rounded p-4">
-        <img src="{{asset('storage/uploads/brands/'.$brand->logo)}}" class="" alt="{{$brand->name}}">
+        <img src="{{asset('storage/app/public/uploads/brands/'.$brand->logo)}}" class="" alt="{{$brand->name}}">
       </div>
       @endforeach
       @endif
@@ -33,7 +33,7 @@
     <div class="container py-5  justify-content-center">
       <div class="row">
         <div class="col-md-3">
-          <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+          <img src="assets\img\certificates\fsda_certificate.jpg" class="card-img" alt="Image of a person">
         </div>
     {{-- <div class="container pb-5"> --}}
         {{-- <div class="row"> --}}
@@ -41,10 +41,10 @@
             <img src="assets\img\certificates\fsda_certificate.jpg" class="card-img" alt="Image of a person">
           </div>
           <div class="col-md-3">
-            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+            <img src="assets\img\certificates\fsda_certificate.jpg" class="card-img" alt="Image of a person">
           </div>
           <div class="col-md-3">
-            <img src="storage\uploads\about_us\topgun.jpg" class="card-img" alt="Image of a person">
+            <img src="assets\img\certificates\fsda_certificate.jpg" class="card-img" alt="Image of a person">
           </div>
         </div>
       </div>
@@ -154,12 +154,13 @@
           @foreach($productData as $product)
           <div class="border border-primary rounded position-relative vesitable-item">
             <div class="vesitable-img">
-              <img src="{{asset('storage/uploads/products/'.$product->thumbnail)}}" class="img-fluid w-100 rounded-top" alt="{{$product->name}}">
+              <img src="{{asset('storage/app/public/uploads/products/'.$product->thumbnail)}}" class="img-fluid w-100 rounded-top" alt="{{$product->name}}">
             </div>
             <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">{{$product->brand->name}}</div>
-            <div class="p-4 rounded-bottom">
-              <h4>{{$product->name}}</h4>
-              <p>{{$product->category->name}}</p>
+            <div class="p-4 rounded-bottom text-center">
+                <h4>{{$product->name}}</h4>
+                <p class="text-primary">{{$product->category->name}}</p>
+                <p>{{$product->add_info}}</p>
             </div>
           </div>
           @endforeach
@@ -191,7 +192,7 @@
                 <div class="row justify-content-center">
                   @foreach($department->vendors as $vendor)
                   <div class="col-md-2 col-sm-4 col-6 mb-4 img-border-radius bg-light rounded p-2 mx-2">
-                    <img src="{{ asset('storage/uploads/vendors/'.$vendor->image) }}" class="img-fluid" alt="{{ $vendor->name }}">
+                    <img src="{{ asset('storage/app/public/uploads/vendors/'.$vendor->image) }}" class="img-fluid" alt="{{ $vendor->name }}">
                   </div>
                   @endforeach
                 </div>

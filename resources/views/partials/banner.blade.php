@@ -13,20 +13,20 @@
                         @foreach($bannerData as $sr => $banner)
                         @if($sr == 1)
                         <div class="carousel-item active rounded">
-                            <img src="{{asset('storage/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
+                            <img src="{{asset('storage/app/public/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>{{ $banner->title }}</h2>
-                                <h4>{{ $banner->sub_title }}</h4>
-                                <p>{{ $banner->body }}</p>
+                                <h2 class="display-4 text-primary">{{ $banner->title }}</h2>
+                                <h4 class="display-6 text-dark">{{ $banner->sub_title }}</h4>
+                                <p class="lead text-dark">{{ $banner->body }}</p>
                             </div>
                         </div>
                         @else
                         <div class="carousel-item rounded">
-                            <img src="{{asset('storage/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
+                            <img src="{{asset('storage/app/public/uploads/banners/'.$banner->image)}}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="{{$banner->title}}">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>{{ $banner->title }}</h2>
-                                <h4>{{ $banner->subtitle }}</h4>
-                                <p>{{ $banner->body }}</p>
+                                <h2 class="display-4 text-primary">{{ $banner->title }}</h2>
+                                <h4 class="display-6 text-dark">{{ $banner->sub_title }}</h4>
+                                <p class="lead text-dark">{{ $banner->body }}</p>
                             </div>
                         </div>
                         @endif

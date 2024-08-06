@@ -84,8 +84,8 @@ class FEController extends Controller
         ], [
             'name.required' => "Enter title",
             'name.regex' => "Alphabets only, 2-100 characters",
-            'contact_no.required'=> "Contact Number is Required",
-            'contact_no.digits' => "Only 10 numbers allowed",
+            'contact_no.required'=> "Contact number is required",
+            'contact_no.digits' => "Only 10 digits allowed",
             'message.max' => "Alphanumeric only, 2-500 characters",
 
         ]);

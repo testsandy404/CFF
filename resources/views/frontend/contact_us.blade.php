@@ -6,7 +6,7 @@
 <!-- <div class="container-fluid page-header py-5">
     <h1 class="text-center text-white display-6">Contact Us</h1>
 </div> -->
-<div class="container-fluid pt-5 pb-3">
+<div class="container-fluid pt-5 pb-3" id="contact-header">
     <div class="text-center mx-auto" style="max-width: 700px;">
         <h1 class="display-4">Contact Us</h1>
     </div>
@@ -120,4 +120,9 @@
 </style>
 @endsection
 
+<script>
+    window.onload = function() {
+        document.getElementById('contact-header').scrollIntoView();
+    };
+</script>
 @stop
